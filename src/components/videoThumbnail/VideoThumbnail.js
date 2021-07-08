@@ -24,7 +24,7 @@ class VideoThumbnail extends React.Component {
     }
     
     render() {
-        const video = this.props.video;
+        const videoSD = this.props.video.video_files.filter((vid) => vid.quality === 'sd')[0];
         return (
             <div>
                 <div className="item-video">
@@ -35,14 +35,14 @@ class VideoThumbnail extends React.Component {
                             event.target.pause()
                         }}
                         muted={true}
-                        src={video.video_files[0].link} >
+                        src={videoSD.link} >
                     </video>
                     <div className="overlay">
                         <img id="icon" alt="play icon" src={myIcon}/>
                     </div>
                 </div>
                 <Modal className="modal-video" isOpen={this.state.showModal} ariaHideApp={false}>
-                    <ModalVideo onClick={this.handleCloseModal} video={video}/>
+                    <ModalVideo onClick={this.handleCloseModal} video={this.props.video}/>
                 </Modal>
             </div>
         );

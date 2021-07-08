@@ -22,11 +22,12 @@ class ModalVideo extends React.Component {
     }
 
     render() {
-        const video = this.props.video;
+        const videoHD = this.props.video.video_files.filter((vid) => vid.quality === 'hd')[0];
         return (
             <div className="modal-video">
                 <div className="item-modalVideo">
-                    <video id="video-modal" src={video.video_files[0].link} width={video.video_files[0].width} height={video.video_files[0].height} onClick={this.handlePlay}></video>
+                    {/* <video id="video-modal" src={video.video_files[0].link} width={video.video_files[0].width} height={video.video_files[0].height} onClick={this.handlePlay}></video> */}
+                    <video id="video-modal" src={videoHD.link} onClick={this.handlePlay}></video>
                     <div className="overlay-video" id="overlay-video" onClick={this.handlePlay}>
                         <img id="icon" alt="play icon" src={myIcon}/>
                     </div>
