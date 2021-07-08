@@ -1,0 +1,122 @@
+.switch {
+    position: relative;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 2vw;
+}
+#isVideo:hover {
+    cursor: pointer;
+}
+
+.switch input {
+    appearance: none;
+    width: 170px;
+    height: 39px;
+    transform: translateY(-7.5%);
+    border-radius: 4px;
+    background: #4db6c4;
+    outline: none;
+}
+.switch input::before {
+    position: absolute;
+    color: #ffffff;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 800;
+    content: "PHOTO";
+    left: 20px;
+}
+.switch input::after {
+    position: absolute;
+    color: #ffffff;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 800;
+    content: "VIDEO";
+    right: 20px;
+}
+
+.switch label {
+    // z-index: 1;
+    position: absolute;
+    top: 4px;
+    bottom: 5px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+.switch:hover label {
+    cursor: pointer;
+}
+.switch input:not(:checked)+label {
+    left: 90px;
+    right: 7px;
+    transition: left 0.4s 0.2s, right 0.5s;
+}
+.switch input:checked+label {
+    left: 8px;
+    right: 90px;
+    transition: left 0.5s, right 0.4s 0.2s;
+}
+
+
+// .switch {
+//     position: relative;
+//     height: 40px;
+//     border-radius: 10px;
+//     margin-left: 2vw;
+// }
+// #isVideo:hover {
+//     cursor: pointer;
+// }
+
+// .switch input {
+//     appearance: none;
+//     width: 170px;
+//     height: 39px;
+//     transform: translateY(-7.5%);
+//     border-radius: 4px;
+//     background: #ffffff;
+//     border: 2px solid #4db6c4;
+//     outline: none;
+// }
+// .switch input::before {
+//     position: absolute;
+//     color: #4db6c4;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     font-weight: 800;
+//     content: "PHOTO";
+//     left: 20px;
+// }
+// .switch input::after {
+//     position: absolute;
+//     color: #4db6c4;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     font-weight: 800;
+//     content: "VIDEO";
+//     right: 20px;
+// }
+
+// .switch label {
+//     position: absolute;
+//     top: 1px;
+//     bottom: 2px;
+//     border-radius: 3px;
+//     background: #4db6c4;
+// }
+// .switch:hover label {
+//     cursor: pointer;
+// }
+// .switch input:not(:checked)+label {
+//     left: 87px;
+//     right: 4px;
+//     border-radius: 0px 3px 3px 0px;
+//     transition: left 0.4s 0.2s, right 0.5s, border-radius 0.5s;
+// }
+// .switch input:checked+label {
+//     left: 5px;
+//     right: 87px;
+//     border-radius: 3px 0px 0px 3px;
+//     transition: left 0.5s, right 0.4s 0.2s, border-radius 0.5s;
+// }
